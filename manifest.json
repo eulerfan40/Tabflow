@@ -18,8 +18,8 @@
     "commands": {
       "open-overlay": {
         "suggested_key": {
-          "default": "Ctrl+Alt+N",
-          "mac": "Command+Alt+N"
+          "default": "Ctrl+Shift+Alt+N",
+          "mac": "Command+Shift+Alt+N"
         },
         "description": "Open Tabflow Overlay"
       }
