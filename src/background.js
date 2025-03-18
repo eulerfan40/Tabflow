@@ -40,3 +40,43 @@ chrome.commands.onCommand.addListener((command) => {
         console.log("Unknown command:", command);
     }
   });
+
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    switch (message.action) {
+      case "move-tab-to-new-window":
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          const tab = tabs[0];
+          chrome.windows.create({ tabId: tab.id });
+        });
+        break;
+  
+      case "duplicate-tab":
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          const tab = tabs[0];
+          chrome.tabs.duplicate(tab.id);
+        });
+        break;
+  
+      case "duplicate-tab-to-new-window":
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          const tab = tabs[0];
+          chrome.tabs.duplicate(tab.id, (duplicatedTab) => {
+            chrome.windows.create({ tabId: duplicatedTab.id });
+          });
+        });
+        break;
+  
+      case "open-gui":
+        chrome.windows.create({
+          url: chrome.runtime.getURL("web/index.html"),
+          type: "popup",
+          width: 800,
+          height: 600
+        });
+        break;
+  
+      default:
+        console.log("Unknown action:", message.action);
+    }
+  });
+  
