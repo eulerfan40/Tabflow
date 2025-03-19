@@ -4,44 +4,42 @@
 }
 
 @font-face {
-  font-family: "Mont-Light";
-  src: url("../fonts/Mont-Light.otf") format("opentype");
+  font-family: "ZTGatha-SemiBold";
+  src: url("../fonts/ZTGatha-SemiBold.otf") format("opentype");
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Mont-Light", Arial, sans-serif;
+  font-family: "ZTGatha-SemiBold", Arial, sans-serif;
   background: linear-gradient(135deg, #1d1924, #1a1a1a);
-  color: #ffffff;
-  min-width: 550px;
+  color: #f0def7;
+  min-width: 520px;
 }
 
 .container {
-  padding: 20px;
+  padding: 25px;
 }
 
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .header img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   margin-right: 10px;
-  object-fit: contain;
 }
 
 .header h1 {
   font-family: "Mont-Heavy", Arial, sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   color: #bb86fc;
   margin: 0;
 }
 
-.actions h2 {
+h2 {
   font-family: "Mont-Heavy", Arial, sans-serif;
   font-size: 20px;
   color: #bb86fc;
@@ -51,33 +49,30 @@ body {
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.actions button {
+button {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 12px;
-  background-color: rgba(51, 51, 51, 0.8);
+  padding: 10px;
+  background-color: rgb(20 17 27 / 89%);
   border: none;
-  color: #ffffff;
+  color: #f0def7;
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.2s;
-  font-size: 16px;
-  font-family: "Mont-Light", Arial, sans-serif;
+  transition: background-color 0.1s;
+  font-family: "ZTGatha-SemiBold", Arial, sans-serif;
 }
 
-.actions button:hover {
-  background-color: rgba(68, 68, 68, 0.8);
+button:hover {
+  background-color: #372d43;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  margin-right: 12px;
-  object-fit: contain;
 }
 
 .description {
@@ -89,39 +84,14 @@ body {
 .shortcut {
   font-size: 14px;
   color: #bb86fc;
-  background-color: rgba(68, 68, 68, 0.8);
+  background-color: rgb(41 25 55 / 80%);
   padding: 4px 8px;
-  border-radius: 6px;
-  margin-left: 12px;
+  border-radius: 12px;
   white-space: nowrap;
 }
 
 .settings {
-  margin-top: 20px;
-}
-
-.settings h2 {
-  font-family: "Mont-Heavy", Arial, sans-serif;
-  font-size: 20px;
-  color: #bb86fc;
-  margin-bottom: 16px;
-}
-
-.settings button {
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 12px;
-  background-color: rgba(51, 51, 51, 0.8);
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-  font-size: 16px;
-  font-family: "Mont-Light", Arial, sans-serif;
-}
-
-.settings button:hover {
-  background-color: rgba(68, 68, 68, 0.8);
+  flex-direction: column;
+  gap: 10px;
 }

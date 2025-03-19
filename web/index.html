@@ -8,8 +8,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Your Tabs</h1>
-      <div id="tab-list"></div>
+      <div class="header">
+        <img src="../src/icons/tabflow-icon.png" alt="Tabflow Icon" />
+        <h1>Tabflow</h1>
+      </div>
+      <div class="lists">
+        <div class="list" id="all-tabs">
+          <h2>All Tabs</h2>
+          <ul id="all-tabs-list"></ul>
+        </div>
+        <div class="list" id="move-to-window">
+          <h2>Move to this Window</h2>
+          <ul id="move-to-window-list"></ul>
+        </div>
+      </div>
+      <button id="move-tabs-button">Move 0 tabs</button>
+      <!-- The number of tabs is changed adaptively in script.js -->
     </div>
     <script src="script.js"></script>
   </body>
